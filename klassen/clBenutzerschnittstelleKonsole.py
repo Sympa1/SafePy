@@ -1,7 +1,10 @@
 from klassen.clMasterAccount import *
 
 class BenutzerschnittstelleKonsole:
+    """Eine Klasse für die Benutzeroberfläche der Konsole. Diese bietet Methoden für die Anmeldung und das Hauptmenü.
+    """
     def userinterface_login(self):
+        """Diese Methode bietet die Möglichkeit sich einzuloggen oder einen neuen Account zu erstellen"""
         while True:
             try:
                 input1 = input("Möchtest du dich einloggen, oder einen neuen Account erstellen? (1 = Einloggen | 2 = Neuer Account)\nEingabe: ")
@@ -29,6 +32,8 @@ class BenutzerschnittstelleKonsole:
                 print(f"\nFehlercode: {e}\nDu hast mit << {input1} >> eine ungültige Eingabe getätigt.\n")
 
     def userinterface_hauptmenue(self):
+        """"Diese Methode bietet die Möglichkeit, verschiedene Aktionen auszuführen,
+        wie z.B. das Generieren eines Passworts oder das Anlegen eines neuen Dienstes."""
         print("\nDu hast folgende Eingabeoptionen:")
         print(40 * "-")
         print(f"- {1:<5} = {"Passwort generieren" :>25}")
