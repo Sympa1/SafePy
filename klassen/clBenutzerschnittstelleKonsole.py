@@ -14,9 +14,11 @@ class BenutzerschnittstelleKonsole:
                     input_passwort = input("Passwort: ")
 
                     login = LoginMasterAccount(input_nutzername, input_passwort)
-                    login.login_account()
-                    # Hier ein log Logikmethode hinzufügen - True, dann "break"
-                    break # TODO: -> Dieser "break" kann dann entfernt werden
+                    if login.login_account() == True:
+                        self.userinterface_hauptmenue()
+                        break
+                    else:
+                        print("Das eingegebenene passwort ist nicht korrekt!")
                 elif int(input1) == 2:
                     # TODO: Eine Überprüfungen erstellen, ob Leerzeichen enthalten sind
                     input_nutzername = input("Nutzername: ")

@@ -41,3 +41,8 @@ Standard-Login:
 
 Nutzername: HansDampf
 Passwort: Milchstraße123
+
+### 5. Inpelmentierung einer simplen Login-Funktion
+
+Eine simple Login-Funktion  wurde implementiert, das Passwort des Nutzers überprüft. Jedoch aktuell nicht den Nutzernamen. 
+Hierzu werden die Haswerte des eingegeben Passwortes und die des gespeicherten Passwortes verglichen.
