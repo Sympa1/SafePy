@@ -1,4 +1,5 @@
 from klassen.clMasterAccount import *
+from funktionen import f_pw_generator
 
 class BenutzerschnittstelleKonsole:
     """Eine Klasse für die Benutzeroberfläche der Konsole. Diese bietet Methoden für die Anmeldung und das Hauptmenü.
@@ -36,15 +37,23 @@ class BenutzerschnittstelleKonsole:
     def userinterface_hauptmenue(self):
         """"Diese Methode bietet die Möglichkeit, verschiedene Aktionen auszuführen,
         wie z.B. das Generieren eines Passworts oder das Anlegen eines neuen Dienstes."""
-        print("\nDu hast folgende Eingabeoptionen:")
-        print(40 * "-")
-        print(f"- {1:<5} = {"Passwort generieren" :>25}")
-        # TODO: "Passwort generieren" auch bei Anlegung eines neuen eintrags anbieten
-        print(f"- {2:<5} = {"Neuen Eintrag anlegen" :>25}")
-        print(f"- {3:<5} = {"Eintrag anzeigen" :>25}")
-        print(f"- {4:<5} = {"Eintrag bearbeiten" :>25}")
-        print(f"- {5:<5} = {"Eintrag löschen" :>25}")
-        print(f"- {6:<5} = {"Accountpasswort ändern" :>25}")
-        print(f"- {7:<5} = {"???" :>25}")
-        print("\n")
-        input2 = input("Eingabe:")
+        while True:
+            print("\nDu hast folgende Eingabeoptionen:")
+            print(40 * "-")
+            print(f"- {1:<5} = {"Passwort generieren" :>25}")
+            # TODO: "Passwort generieren" auch bei Anlegung eines neuen eintrags anbieten
+            print(f"- {2:<5} = {"Neuen Eintrag anlegen" :>25}")
+            print(f"- {3:<5} = {"Eintrag anzeigen" :>25}")
+            print(f"- {4:<5} = {"Eintrag bearbeiten" :>25}")
+            print(f"- {5:<5} = {"Eintrag löschen" :>25}")
+            print(f"- {6:<5} = {"Accountpasswort ändern" :>25}")
+            print("\n")
+            input2 = input("Eingabe:")
+
+            # TODO: eine try/except Fehlerbehandlung hinzufügen
+
+            if input2 == str(1):
+                generiertes_passwort = f_pw_generator(int(input("Geben Sie die gewünschte Passwortlänge an (max. 256 Zeichen): ")))
+                print(generiertes_passwort)
+            else:
+                print(f"<<{str(input2)}>> ist keine gültige Eingabe!")
