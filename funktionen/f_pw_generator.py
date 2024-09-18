@@ -1,9 +1,5 @@
 import secrets
 
-# TODO: Gedanken Notiz: Wenn die Variable "passwort" immer länger werden sollte, ist die Lebensdauer
-#  der Variable Zeitlich nicht nicht an die Ausführungszeit der Funktion "pw_generator" gebunden
-#  und muss innerhalb der Funktion Deklariert werden.
-
 # Deklaration der Passwort Symobolliste
 passwort_symbole = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u",
                     "v", "w", "x", "y", "z", "!", "@", "#", "$", "%", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A",
