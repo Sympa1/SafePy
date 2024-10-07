@@ -1,0 +1,5 @@
+# Linux Mint und Windows virtuelle Umgebungen ignorieren
+venv/
+env/
+
+__pycache__/

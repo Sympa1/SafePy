@@ -46,3 +46,10 @@ Passwort: Milchstraße123
 
 Eine simple Login-Funktion  wurde implementiert, das Passwort des Nutzers überprüft. Jedoch aktuell nicht den Nutzernamen. 
 Hierzu werden die Haswerte des eingegeben Passwortes und die des gespeicherten Passwortes verglichen.
+
+### 6. Hinzufügen der Funktion um den Symmetrischer Schlüssel von dem Master Passwort abzuleiten
+
+Der symmetrischer Schlüssel wird von dem jeweiligen Master Passwort abegeleitet und erstellt.
+Hierzu wird das optionale Python Modul "cryptography" genutzt. 
+Um Rainbowtable Angriffe zu erschweren wird wieder ein Salt (eine 16 Byte lange zufällige Sequenz) und wird ebenfalls abgespeichert.
+Es wird zur Erstellung die SHA 256 Hash Funktion genutzt um einen 256 Bit langen Schlüssel zu erzeugen.
